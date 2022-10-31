@@ -53,7 +53,7 @@
     <section class="backstage">
       <div class="wrapper">
         <div class="backstage_box">
-          <div class="image_box"> <img src="/assets/images/bamboo-cap.png" alt=""></div>
+          <div class="image_box"> <img src="./assets/images/bamboo-cap.png" alt=""></div>
           <div class="backstage_text">
           <h2>The Backstage of the Wilderness World.</h2>
           <p>The site was founded on the basis of a volunteer movement to protect and care for animals.</p>
@@ -68,32 +68,37 @@
      <div class="wrapper">
        <div class="slider">
 
-          <div class="slider_card">
-            <img src="/assets/images/pandas.png" alt="Pandas">
+            <button class="button_prev"></button>
+            <button class="button_next"></button>
+
+        <div class="slider_cards">
+
+          <div class="slider_item">
+            <img src="./assets/images/pandas.png" alt="Pandas">
             <div class="card_content">
               <h4>GIANT PANDAS</h4>
               <p>Native to Southwest China</p>
             </div>
           </div>
 
-          <div class="slider_card">
-            <img src="/assets/images/eagles.png" alt="EAgles">
+          <div class="slider_item">
+            <img src="./assets/images/eagles.png" alt="EAgles">
             <div class="card_content">
               <h4>EAGLES</h4>
               <p>Native to South America</p>
             </div>
           </div>
 
-          <div class="slider_card">
-            <img src="/assets/images/gorilas.png" alt="Gorillas">
+          <div class="slider_item">
+            <img src="./assets/images/gorilas.png" alt="Gorillas">
             <div class="card_content">
               <h4>GORILLAS</h4>
               <p>Native to Congo</p>
             </div>
           </div>
 
-          <div class="slider_card">
-            <img src="/assets/images/sloth.png" alt="Two-toed sloth">
+          <div class="slider_item">
+            <img src="./assets/images/sloth.png" alt="Two-toed sloth">
             <div class="card_content">
               <h4>TWO-TOED SLOTH</h4>
               <p>Mesoamerica, South America</p>
@@ -101,8 +106,8 @@
           </div>
 
 
-          <div class="slider_card">
-            <img src="/assets/images/cheetah.png" alt="Cheetahs">
+          <div class="slider_item">
+            <img src="./assets/images/cheetah.png" alt="Cheetahs">
             <div class="card_content">
               <h4>CHEETAHS</h4>
               <p>Native to Africa</p>
@@ -110,13 +115,16 @@
           </div>
 
 
-          <div class="slider_card">
-            <img src="/assets/images/penguans.png" alt="Penguins">
+          <div class="slider_item">
+            <img src="./assets/images/penguans.png" alt="Penguins">
             <div class="card_content">
               <h4>PENGUINS</h4>
               <p>Native to Antarctica</p>
             </div>
           </div>
+
+
+        </div>
 
         </div>
         <button class="choose_button">CHOOSE YOUR FAVORITE</button>
@@ -135,27 +143,30 @@
           <div class="payment">
             <p>How it works</p>
 
-            <div class="payment_card">
+            <div class="payment_steps">
 
-              <div class="payment_container"></div>
+            <div class="step">
+
+              <div class="step_box pay_card"></div>
               <p>Pay with card</p>
 
             </div>
 
-            <div class="payment_card">
+            <div class="step">
 
-              <div class="payment_container"></div>
+              <div class="step_box plant"></div>
                 <p>Payment goes to the zoo</p>
 
             </div>
 
-            <div class="payment_card">
+            <div class="step">
 
-              <div class="payment_container"></div>
+              <div class="step_box monkey"></div>
                 <p>Your favourite animal gets delicious dish</p>
 
 
             </div>
+          </div>
 
           </div>
 
