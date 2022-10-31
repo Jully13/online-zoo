@@ -1,7 +1,24 @@
+
 @font-face {
-    font-family: Roboto;
-    src: url(/assets/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff);
-}
+    font-family: 'Roboto';
+    src: local('Roboto-Bold'),url(../../assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto-Medium'), url(../../assets/fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto-Regular'), url(../../assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+  }
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -382,6 +399,8 @@ margin: 0 auto;
 /* header styles start*/
 
 .header, .footer{
+    position: relative;
+    z-index: 2;
     background-color: black;
     top: 0;
     left: 0;
@@ -471,8 +490,6 @@ margin: 0 auto;
     background-size: cover;
     height: 780px;
     width: 100%;
-    margin-bottom: 140px;
-
 }
 
 .intro_box{
@@ -522,9 +539,22 @@ font-size: 1.6rem;
 
 
 .backstage{
+position: relative;
 height: 403px;
-margin-bottom: 180px;
-background: url(../../assets/images/flower_foto1.png) 100% no-repeat;
+margin-bottom: 254px;
+
+}
+
+.backstage::after{
+    content: '';
+    width: 204px;
+    height: 605px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    z-index: -2;
+    background: url(../../assets/images/flower_foto1.jpg) 0 50% no-repeat;
 }
 
 .backstage_box{
@@ -536,10 +566,12 @@ height: 403px;
 }
 
 .image_box{
+    margin-top: 140px;
 height: 403px;
 }
 
 .backstage_text{
+    margin-top: 140px;
 margin-left: 87px;
 height:403px;
 }
@@ -571,21 +603,54 @@ h3{
 
 .animals{
     margin-bottom: 224px;
+    position: relative;
+}
+
+.animals::after{
+    content: '';
+    width: 880px;
+    height: 460px;
+    position: absolute;
+    left: 0px;
+    top: 695px;
+
+    background: url(../../assets/images/palm_foto.png) 0 50% no-repeat;
+}
+
+.animals::before{
+    content: '';
+    width: 368px;
+    height: 275px;
+    position: absolute;
+    right: 0px;
+    top: 885px;
+
+    background: url(../../assets/images/strelitzia\ 1.png) 0 50% no-repeat;
 }
 
 
-.slider{
+.button_prev, .button_next {
+    display:none;
+    width: 62px;
+    height: 62px;
+    border-radius: 31px;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+
+
+  }
+
+.slider_cards{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
 }
 
-.slider_card{
+.slider_item{
     margin: 30px 20px;
 
 }
 
-.slider_card:hover {
+.slider_item:hover {
     transform: scale(1.2);
 }
 
@@ -644,7 +709,7 @@ padding-left: 99px;
 }
 
 .covid{
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
@@ -657,6 +722,53 @@ padding-left: 99px;
     padding-left: 99px;
 }
 
+.payment{
+    margin-top: 61px;
+    text-align: center;
+}
+
+.payment_steps{
+    margin: 40px auto 60px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 764px;
+}
+
+.step {
+    width: 168px;
+  }
+
+  .pay_card {
+    background: url(../../assets/images/pay.png) 50% no-repeat;
+  }
+  .plant {
+    background: url(../../assets/images/zoo.png) 50% 55% no-repeat;
+  }
+  .monkey {
+    background: url(../../assets/images/monkey.png) 50% no-repeat;
+  }
+
+  .step_box{
+    width: 168px;
+    height: 168px;
+    border: 1px solid #f9804b;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .step:nth-of-type(-n + 2) .step_box:after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 119%;
+    width: 69px;
+    height: 35px;
+    z-index: 1;
+    background: url(../../assets/icons/Vector.png) 50% no-repeat;
+  }
+
 .payment p{
     font-family: 'Roboto';
     font-style: normal;
@@ -666,28 +778,7 @@ padding-left: 99px;
     text-align: center;
 }
 
-
-
-.payment_card{
-
-    display: inline-flex;
-
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 5px;
-    border-color: #F9804B;
-    width: 168px;
-    height: 168px;
-    background-image: url(../../assets/images/monkey.png) ;
-}
-
-.payment_container{
-
-
-}
-
-.payment_card p{
+.step p{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -713,14 +804,10 @@ padding-left: 99px;
     color: #FFFFFF;
 }
 
-
-
 .footer_wrapper {
     display: flex;
     flex-direction: column;
     padding: 40px 30px 50px;
-
-
 }
 
 .block_1, .block_3{
@@ -830,7 +917,7 @@ padding-left: 99px;
     border-color: #F9804B;
     width: 228px;
     height: 42px;
-    margin-right: 170px;
+    margin-right: 9px;
     margin-top: 43px;
 
   }
