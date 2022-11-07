@@ -79,18 +79,30 @@
                         <p id="amount">Amount</p>
 
                         <div class="amount_scale">
+                            <div class="scale">
+                                <div class="scale_buttons">
+                                    <div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="5000"><label class="scale_label" for="5000"></label></div>
+                                    <div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="2000"><label class="scale_label" for="2000"></label></div>
+                                    <div class="circle"><div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="1000"><label class="scale_label" for="1000"></label></div></div>
+                                    <div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="500"><label class="scale_label" for="500"></label></div>
+                                    <div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="250"><label class="scale_label" for="250"></label></div>
+                                    <div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="100"><label class="scale_label" for="100"></label></div>
+                                    <div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="50"><label class="scale_label" for="50"></label></div>
+                                    <div class="scale_buttons_item"><input class="radio_input" type="radio" name="radio" id="25"><label class="scale_label" for="25"></label></div>
+                                </div>
 
+                            </div>
                         </div>
 
                         <div class="amount_sum">
-                            <p class="sum_item">$5000</p>
-                            <p class="sum_item">$2000</p>
-                            <p class="sum_item">$1000</p>
-                            <p class="sum_item">$500</p>
-                            <p class="sum_item">$250</p>
-                            <p class="sum_item">$100</p>
-                            <p class="sum_item">$50</p>
-                            <p class="sum_item">$25</p>
+                            <p>$5000</p>
+                            <p>$2000</p>
+                            <p id="sum_item">$1000</p>
+                            <p>$500</p>
+                            <p>$250</p>
+                            <p>$100</p>
+                            <p>$50</p>
+                            <p>$25</p>
                         </div>
 
                         <div class="input_sum_box">
@@ -99,13 +111,13 @@
 
                         <div class="radio_buttons">
                             <div class="radio_form">
-                                <input type="radio" id="Monthly">
-                                <label for="Monthly">Monthly</label>
+                                <input class="radio_input" type="radio" name="period" id="Monthly">
+                                <label class="radio_label" for="Monthly">Monthly</label>
                             </div>
 
                             <div class="radio_form">
-                                <input type="radio" id="Once">
-                                <label for="Once">Once</label>
+                                <input class="radio_input" type="radio" id="Once" name="period" checked="checked">
+                                <label class="radio_label" for="Once">Once</label>
                             </div>
                         </div>
 
